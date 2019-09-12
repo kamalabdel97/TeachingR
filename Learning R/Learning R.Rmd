@@ -1,0 +1,180 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+#Introduction
+
+R is a statistical program that allows statiscians to conduct analysis on a variation of topics. This ranges from healthcare, academia, finance, and marketing. Pretty much, if there's data for it, R can analyze it. 
+
+This tutorial is a preliminary introduction into running statistical analysis in R.
+
+## Basic Syntax
+* Arithemitcs
+* Declaring and Initializing Variables
+
+
+We'll eventually get into the hard statistics and data visualization aspect of R. For now, think of the program as a calculator do simple arithmetics. R has six different sign operators for these arithmetics. 
+
+* `+` Addition - Finding the sum of a set of numbers 
+
+```{r Arithmetic Add, exercise=TRUE}
+1 + 1 
+```
+
+* `-` Subtraction - Finding the difference of a set of numbers
+
+```{r Arithmetic Subtract, exercise=TRUE}
+4 - 2 
+```
+
+* `*` Multiplication - Finding the product of a set of numbers
+
+```{r Arithmetic Multiply, exercise=TRUE}
+6 * 5 
+```
+
+* `/` Division - Finding the quotient of a set of numbers
+
+```{r Arithmetic Divide, exercise=TRUE}
+100 / 10
+```
+
+* `^` Exponents - Exponent value for a set of numbers 
+
+```{r Arithmetic Exponent, exercise=TRUE}
+10^2
+```
+
+
+* `%%` Modulous - Remainder between a set of numbers 
+
+```{r Arithmetic Modulous, exercise=TRUE}
+4 %% 2
+```
+
+### Exercise 
+
+*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+
+Now try it yourself! 
+
+What is the sum of 3 and 4?
+
+```{r SumPractice, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+What is the difference of 10 and 4?
+
+```{r DifferencePractice, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+What is the product of 3 and 6?
+
+```{r ProductPractice, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+What is the quotient of 100 and 4?
+
+```{r QuotientPractice, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+What is the 30 to the power of 3?
+
+```{r ExponentPractice, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+What is the remainder of 100 divided by 4? 
+
+```{r ModoulousPractice, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+
+Quiz Time!!
+
+Answer these questions to help you review the concepts you learned
+
+```{r ArithmeticQuiz}
+quiz(
+  question("Which sign operator do I use to find the remainder of two values?",
+    answer("%%", correct = TRUE),
+    answer("/"),
+    answer("*"),
+    answer("+")
+  ),
+  question("Which sign operator do I use to find the quotient between two values?",
+    answer("%%"),
+    answer("/", correct = TRUE),
+    answer("*"),
+    answer("+")
+  )
+)
+```
+
+
+
+
+
+### Exercise with Code
+
+*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+
+Now write a function that adds any two numbers and then call it:
+
+```{r add-function, exercise=TRUE, exercise.lines = 5}
+add <- function() {
+  
+}
+```
+
+## Topic 2
+
+### Exercise with Hint
+
+*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+
+Modify the following code to limit the number of rows printed to 5:
+
+```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
+mtcars
+```
+
+```{r print-limit-hint}
+head(mtcars)
+```
+
+### Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE)
+  )
+)
+```
+
